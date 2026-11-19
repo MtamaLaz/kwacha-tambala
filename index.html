@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Kwacha & Tambala</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="welcome-screen" id="welcome-screen">
+            <h1>WELCOME TO COIN FLIPPER</h1>
+            <p class="creator">BY MTAMANDENI LAZARO</p>
+        <div class="coin-logo">K & T</div>
+        <button onclick="nextPage()">NEXT</button>
+        </div>
+        <div class="welcome-screen" id="choices-screen" style="display:none;">
+         
+            <h1>LET'S MAKE A CHOICE!</h1>
+
+            <p>Enter the two options you cant decide between.</p>
+
+            <h2>HEADS - KWACHA</h2>
+            <input type="text" id="kwacha-option" placeholder="Enter your first option" required>
+
+            <h2>TAILS - TAMBALA</h2>
+            <input type="text" id="tambala-option" placeholder="Enter your second option"required>
+            <button onclick="startFlipping()">FLIP THE COIN</button>
+
+        </div>
+        <div class="welcome-screen"  id="intro-screen" style="display: none;">
+        <h1>CAN'T MAKE UP YOUR MIND?</h1>
+        <p class="intro-text">Sometimes choosing between two things
+            isn't easy. Apple or orange?
+            staying home or going out?
+            Let our lucky Malawian coin make the decision for you!
+        </p>
+        <p>Welcome to Kwacha and Tambala!</p>
+
+        <button onclick="showChoices()">NEXT</button>
+
+        </div>
+        <!--COIN FLIPPING SCREEN-->
+        <div class="welcome-screen" id="coin-screen" style="display:none;">
+            <h1>LET'S FLIP THE COIN</h1>
+            <p>Your lucky Malawian coin is ready.</p>
+            <div class="coin" id="coin" aria-label="Flipping coin">
+                <div class="coin-face coin-front">
+                    KWACHA
+                </div>
+                <div class="coin-face coin-back">
+                    TAMBALA
+                </div>
+            </div>
+            <p id="first-choice"></p>
+            <p id="second-choice"></p>
+
+            <div id="result-box">
+                <h2>THE WINNER IS:</h2>
+            <p id="result">Your result will appear here.</p>
+        </div>
+        <button id="refresh-button"
+      onclick="location.reload()"
+      style="display:none;">
+    REFRESH
+</button>
+
+</div>
+
+        <script src="script.js"></script>
+        </body>
+</html>
